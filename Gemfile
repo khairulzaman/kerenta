@@ -35,7 +35,6 @@ end
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
-  gem 'turn', :require => false
   gem 'cucumber-rails', '1.0.6'
   gem 'capybara'
   gem 'database_cleaner'
