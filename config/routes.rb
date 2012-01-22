@@ -1,4 +1,6 @@
 Kerenta::Application.routes.draw do
+  root :to => "owners#index"
+  resources :owners
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

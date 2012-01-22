@@ -1,0 +1,25 @@
+<%= form_for(@owner, :html => { :class => 'form-stacked'} ) do |f| %>
+  <fieldset>
+    <div class="clearfix">
+      <%= f.label :name %>
+      <div class="input">
+        <%= f.text_field :name %>
+      </div>
+    </div>
+    <div class="clearfix">
+      <%= f.label :telephone %>
+      <div class="input">
+        <%= f.telephone_field :telephone %>
+      </div>
+    </div>
+    <div class="clearfix">
+      <%= f.label :address %>
+      <div class="input">
+        <%= f.text_area :address %>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Create Owner', :class => 'btn primary' %>
+    </div>
+  </fieldset>
+<% end %>

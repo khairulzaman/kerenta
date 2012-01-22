@@ -7,8 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="topbar">
+    <div class="fill">
+      <div class="container">
+        <a class="brand" href="/">Kerenta</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <% flash.each do |key, value| %>
+        <div class='<%= 'alert-message ' + key.to_s %>'>
+          <%= value %>
+        </div>
+      <% end %>
+      <%= yield %>
+    </div>
+    <footer>
+      <p>&copy; Kerenta 2011</p>
+    </footer>
+  </div>
 </body>
 </html>
