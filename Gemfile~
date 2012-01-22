@@ -35,11 +35,6 @@ end
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
+  # Pretty printed test output
   gem 'turn', :require => false
-  gem 'cucumber-rails', '1.0.6'
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'factory_girl'
-  gem 'devise', '~> 1.4.3'
-  gem 'email_spec'
 end
