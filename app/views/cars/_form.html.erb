@@ -1,0 +1,33 @@
+<%= form_for([@owner, @car], :html => { :class => 'form-stacked'} ) do |f| %>
+  <%= f.error_messages %>
+  <fieldset>
+    <div class="clearfix">
+      <%= f.label :make %>
+      <div class="input">
+        <%= f.text_field :make %>
+      </div>
+    </div>
+    <div class="clearfix">
+      <%= f.label :model %>
+      <div class="input">
+        <%= f.text_field :model %>
+      </div>
+    </div>
+    <div class="clearfix">
+      <%= f.label :registration_number %>
+      <div class="input">
+        <%= f.text_field :registration_number %>
+      </div>
+    </div>
+    <div class="clearfix">
+      <%= f.label :hourly_rate %>
+      <div class="input">
+        <%= f.text_field :hourly_rate %>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit :class => "btn primary" %>
+      <%= link_to "Cancel", owners_path, :class => "btn" %>
+    </div>
+  </fieldset>
+<% end %>
