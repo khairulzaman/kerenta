@@ -10,7 +10,6 @@ Feature: Creating owners
   Scenario: Creating an owner
     And I fill in "Name" with "Eddie Vader"
     And I fill in "Telephone" with "0123456789"
-    And I fill in "Address" with "1, Taman Bukit Tipu, 69012 Kuala Tipu"
     And I press "Create Owner"
     Then I should see "Owner has been created."
     And I should be on the owner page for "Eddie Vader"
