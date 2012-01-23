@@ -20,7 +20,8 @@
       </div>
     </div>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit :class => "btn primary" %>
+      <%= link_to "Cancel", owners_path, :class => "btn" %>
     </div>
   </fieldset>
 <% end %>
