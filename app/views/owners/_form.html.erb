@@ -1,4 +1,5 @@
 <%= form_for(@owner, :html => { :class => 'form-stacked'} ) do |f| %>
+  <%= f.error_messages %>
   <fieldset>
     <div class="clearfix">
       <%= f.label :name %>
@@ -19,7 +20,7 @@
       </div>
     </div>
     <div class="actions">
-      <%= f.submit 'Create Owner', :class => 'btn primary' %>
+      <%= f.submit %>
     </div>
   </fieldset>
 <% end %>

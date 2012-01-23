@@ -1,11 +1,15 @@
+<% title(@owner.name, "Owners") %>
+
 <div class="page-header">
   <h1>Owners Management
     <small>Manage owners here</small>
   </h1>
 </div>
 <div class="row">
-  <div class="span14">
+  <div class="span10">
     <h2>Details for <%= @owner.name %></h2>
+    <small>
+    </small>
     <div class="clearfix">
       <label>Name</label>
       <div>
@@ -25,4 +29,8 @@
       </div>
     </div>
   </div>
+  <div class="span4">
+    <%= link_to "Edit Owner", edit_owner_path(@owner) %>
+    <%= link_to "Delete Owner", @owner, :method => :delete,
+          :confirm => "Are you sure you want to delete this owner?" %>
 </div>
