@@ -20,6 +20,25 @@ class CarsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
+  def update
+    if @car.update_attributes(params[:car])
+      flash[:success] = "Car has been updated."
+      redirect_to [@owner, @car]
+    else
+      flash[:error] = "Car has not been updated."
+      render :action => "edit"
+    end
+  end
+
+  def destroy
+    @car.destroy
+    flash[:success] = "Car has been deleted."
+    redirect_to owner_path(@owner)
+  end
+
   private
     def find_owner
       @owner = Owner.find(params[:owner_id])
