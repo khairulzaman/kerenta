@@ -10,8 +10,44 @@
     <small>
     </small>
     <h2>Details for <%= @owner.name %></h2>
-      <%= @owner.name %>
-      <%= @owner.telephone %>
+			<div class="owner-details">
+			<table>
+				<thead>
+					<tr>
+						<td>Name</td>
+						<td>Telephone</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><%= @owner.name %></td>
+						<td><%= @owner.telephone %></td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+			<div class="car-details">
+			<table>
+				<thead>
+					<tr>
+						<td>Make</td>
+						<td>Model</td>
+						<td>Registration Number</td>
+						<td>Hourly Rate</td>
+					</tr>
+				<thead>
+				<tbody>
+					<% @owner.cars.each do |car| %>
+						<tr>
+							<td> <%= car.make %> </td>
+							<td> <%= car.model %> </td>
+							<td> <%= car.registration_number %> </td>
+							<td> <%= car.hourly_rate %> </td>
+						</tr>
+					<% end %>
+				</tbody>
+			</table>
+			</div>
       <div class="actions">
         <%= link_to "Back", owners_path, :class => "btn" %>
         <%= link_to "New Car", new_owner_car_path(@owner), :class => "btn" %>
