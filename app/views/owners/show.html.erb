@@ -34,6 +34,7 @@
 						<td>Model</td>
 						<td>Registration Number</td>
 						<td>Hourly Rate</td>
+						<td>Actions</td>
 					</tr>
 				<thead>
 				<tbody>
@@ -43,6 +44,7 @@
 							<td> <%= car.model %> </td>
 							<td> <%= car.registration_number %> </td>
 							<td> <%= car.hourly_rate %> </td>
+							<td> <%= link_to "Details", owner_car_path(@owner, car), :class => "btn" %>
 						</tr>
 					<% end %>
 				</tbody>
