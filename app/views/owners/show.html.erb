@@ -26,6 +26,7 @@
 				</tbody>
 			</table>
 			</div>
+            <% if @owner.cars.count > 0 %>
 			<div class="car-details">
 			<table>
 				<thead>
@@ -50,6 +51,7 @@
 				</tbody>
 			</table>
 			</div>
+            <% end %>
       <div class="actions">
         <%= link_to "Back", owners_path, :class => "btn" %>
         <%= link_to "New Car", new_owner_car_path(@owner), :class => "btn" %>
